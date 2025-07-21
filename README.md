@@ -120,6 +120,10 @@ response = stub.ProcessMessage(request)
 print(response.response)  # Output: Tool1 says: Hello AI Tool!
 ```
 
+### For the updated too.proto file:
+- Generate a new tool_pb2_grpc.py and tool_pb2.py files.
+- command: python -m grpc_tools.protoc -I=D:\\Projects\\ToolBox-AI\\ai-tool-1\\proto --python_out=./ai --grpc_python_out=./ai D:\\Projects\\ToolBox-AI\\ai-tool-1\\proto\\tool.proto
+
 ## 📁 Project Structure
 
 ```
