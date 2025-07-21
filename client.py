@@ -1,6 +1,6 @@
 import grpc
-import tool_pb2
-import tool_pb2_grpc
+from ai import tool_pb2
+from ai import tool_pb2_grpc
 
 def run_client():
     # Create a gRPC channel to connect to the server

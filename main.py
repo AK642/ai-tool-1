@@ -1,10 +1,11 @@
 import grpc
 from concurrent import futures
-import tool_pb2
-import tool_pb2_grpc
+from ai import tool_pb2
+from ai import tool_pb2_grpc
 
 class AIToolServicer(tool_pb2_grpc.AIToolServicer):
     def ProcessMessage(self, request, context):
+        print('user id: ', {request.user_id})
         return tool_pb2.ToolResponse(response=f"Tool1 says: {request.message}")
 
 def serve():

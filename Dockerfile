@@ -12,8 +12,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the application code
 COPY main.py .
-COPY tool_pb2.py .
-COPY tool_pb2_grpc.py .
+COPY ai ./ai
 
 # Expose the gRPC port
 EXPOSE 50051

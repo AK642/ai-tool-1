@@ -3,7 +3,7 @@
 import grpc
 import warnings
 
-import tool_pb2 as tool__pb2
+from ai import tool_pb2 as tool__pb2
 
 GRPC_GENERATED_VERSION = '1.73.1'
 GRPC_VERSION = grpc.__version__
@@ -35,7 +35,7 @@ class AIToolStub(object):
             channel: A grpc.Channel.
         """
         self.ProcessMessage = channel.unary_unary(
-                '/AITool/ProcessMessage',
+                '/ai.AITool/ProcessMessage',
                 request_serializer=tool__pb2.UserMessage.SerializeToString,
                 response_deserializer=tool__pb2.ToolResponse.FromString,
                 _registered_method=True)
@@ -60,9 +60,9 @@ def add_AIToolServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'AITool', rpc_method_handlers)
+            'ai.AITool', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
-    server.add_registered_method_handlers('AITool', rpc_method_handlers)
+    server.add_registered_method_handlers('ai.AITool', rpc_method_handlers)
 
 
  # This class is part of an EXPERIMENTAL API.
@@ -83,7 +83,7 @@ class AITool(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/AITool/ProcessMessage',
+            '/ai.AITool/ProcessMessage',
             tool__pb2.UserMessage.SerializeToString,
             tool__pb2.ToolResponse.FromString,
             options,

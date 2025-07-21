@@ -24,17 +24,17 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\ntool.proto\"/\n\x0bUserMessage\x12\x0f\n\x07message\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\" \n\x0cToolResponse\x12\x10\n\x08response\x18\x01 \x01(\t27\n\x06\x41ITool\x12-\n\x0eProcessMessage\x12\x0c.UserMessage\x1a\r.ToolResponseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\ntool.proto\x12\x02\x61i\"/\n\x0bUserMessage\x12\x0f\n\x07message\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\" \n\x0cToolResponse\x12\x10\n\x08response\x18\x01 \x01(\t2=\n\x06\x41ITool\x12\x33\n\x0eProcessMessage\x12\x0f.ai.UserMessage\x1a\x10.ai.ToolResponseb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'tool_pb2', _globals)
 if not _descriptor._USE_C_DESCRIPTORS:
   DESCRIPTOR._loaded_options = None
-  _globals['_USERMESSAGE']._serialized_start=14
-  _globals['_USERMESSAGE']._serialized_end=61
-  _globals['_TOOLRESPONSE']._serialized_start=63
-  _globals['_TOOLRESPONSE']._serialized_end=95
-  _globals['_AITOOL']._serialized_start=97
-  _globals['_AITOOL']._serialized_end=152
+  _globals['_USERMESSAGE']._serialized_start=18
+  _globals['_USERMESSAGE']._serialized_end=65
+  _globals['_TOOLRESPONSE']._serialized_start=67
+  _globals['_TOOLRESPONSE']._serialized_end=99
+  _globals['_AITOOL']._serialized_start=101
+  _globals['_AITOOL']._serialized_end=162
 # @@protoc_insertion_point(module_scope)
